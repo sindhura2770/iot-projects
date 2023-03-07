@@ -1,0 +1,22 @@
+int pushButton=2;
+int led=12;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(led, OUTPUT);
+  pinMode(pushButton,INPUT);
+}
+
+void loop()
+{
+  int buttonState=digitalRead(pushButton);
+  Serial.println(buttonState);
+  delay(50);
+  if(buttonState==1){
+  digitalWrite(led, HIGH);
+  delay(3000); // Wait for 1000 millisecond(s)
+  digitalWrite(led, LOW);
+  delay(10); // Wait for 1000 millisecond(s)
+  }
+  else{}
+}
