@@ -1,0 +1,18 @@
+void setup()
+{
+  pinMode(9, OUTPUT);
+  pinMode(10,OUTPUT);
+}
+
+void loop()
+{//fade in effect
+  for(int i=0;i<(255/2);i=i+5){
+    analogWrite(9,i);
+    delay(200);
+}
+  //fade out effect
+  for(int j=(255/2);j>=0;j=j-5){
+    analogWrite(10,j);
+    delay(200);
+  }
+}
