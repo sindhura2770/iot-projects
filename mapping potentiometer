@@ -1,0 +1,12 @@
+void setup(){
+  Serial.begin(9600);
+  pinMode(10,OUTPUT);
+  pinMode(A0,INPUT);
+  
+}
+void loop(){
+  int value=analogRead(A0);
+  int val=map(value,0,1023,0,96);
+  analogWrite(10,val);
+  Serial.println(val);
+}
